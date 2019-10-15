@@ -1,8 +1,37 @@
-img {
+*{font-family: 'Roboto Mono', monospace;}
+
+.pad {
+    padding-top: 3em;
+}
+
+.main {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about{
+    width: 100%;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ppic {
   border-radius: 50%;
+  width: 300px;
+  height: auto;
   display: block;
+  padding: 1em;
+  padding: 1em;
   margin-left: auto;
   margin-right: auto;
-  width: 16rem;
-  height: 16rem;
+}
+
+.title {
+}
+
+body {
+    background-color: #fffcf7;
 }
