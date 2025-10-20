@@ -8,26 +8,14 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "GitHub"
+    url: https://github.com/isaacery
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Google Scholar"
+    url: https://scholar.google.com/citations?user=eqoMey4AAAAJ&hl=en
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
   - title: "CV"
-    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
+    url: /files/cv.pdf
+
+  - title: "Blog"
+    url: /year-archive/

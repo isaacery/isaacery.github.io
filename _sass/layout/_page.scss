@@ -19,8 +19,8 @@
 .page {
   @include breakpoint($large) {
     @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include prefix(1.25 of 12);
+    @include suffix(1.25 of 12);
   }
 
   .page__inner-wrap {
@@ -38,7 +38,7 @@
   margin-top: 0;
   line-height: 1;
 
-  & + .page__meta {
+  &+.page__meta {
     margin-top: -0.5em;
   }
 }
@@ -55,7 +55,9 @@
     border-bottom: 1px solid var(--global-border-color);
   }
 
-  p, li, dl {
+  p,
+  li,
+  dl {
     font-size: 1em;
   }
 
@@ -64,8 +66,8 @@
     margin: 0 0 $indent-var;
 
     /* sibling indentation*/
-    @if $paragraph-indent == true {
-      & + p {
+    @if $paragraph-indent ==true {
+      &+p {
         text-indent: $indent-var;
         margin-top: -($indent-var);
       }
@@ -73,10 +75,10 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);
@@ -101,7 +103,7 @@
   }
 
   /* blockquote citations */
-  blockquote + .small {
+  blockquote+.small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
@@ -300,6 +302,7 @@
   transition: $global-transition;
 
   &.disabled {
+
     input,
     button,
     textarea,
@@ -398,4 +401,109 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+
+/*
+   Publications List
+   ========================================================================== */
+
+.publications-list {
+  margin-top: 1.5em;
+}
+
+.publication-item {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  @include breakpoint(max-width $medium) {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.publication-image {
+  flex-shrink: 0;
+  width: 200px;
+
+  @include breakpoint(max-width $medium) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+    border: 1px solid var(--global-border-color);
+    transition: $global-transition;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(#000, 0.25);
+    }
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.page__content .publication-title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: $type-size-5 !important;
+  line-height: 1.3;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: var(--global-link-color-hover);
+    }
+  }
+}
+
+.page__content .publication-authors {
+  margin: 0.5em 0;
+  font-size: $type-size-6 !important;
+}
+
+.page__content .publication-venue {
+  margin: 0.5em 0;
+  font-size: $type-size-6 !important;
+}
+
+.page__content .publication-url {
+  margin: 0.5em 0;
+  font-size: $type-size-6 !important;
+
+  a {
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.publication-links {
+  margin-top: 0.75em;
+
+  .btn {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }

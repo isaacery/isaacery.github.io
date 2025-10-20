@@ -1,0 +1,26 @@
+# Publications List
+# Add your publications here in reverse chronological order
+# Each publication should have:
+# - title: Publication title
+# - authors: Author list (use * for equal contribution)
+# - venue: Conference/journal name
+# - year: Publication year
+# - image: Path to thumbnail image (relative to /images/) OR full URL to remote image
+# - url: Link to venue/journal page
+# Optional fields: paper_url, slides_url, poster_url, bibtex_url, code_url
+
+- title: "Census-independent population estimation using representation learning"
+  authors: "Isaac Neal, Sohan Seth, Gary Watmough, Mamadou S Diallo"
+  venue: "Scientific Reports, Volume 12, Issue 1"
+  year: 2022
+  image: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-022-08935-1/MediaObjects/41598_2022_8935_Fig3_HTML.png"
+  url: "https://www.nature.com/articles/s41598-022-08935-1"
+
+- title: "Towards Sustainable Census Independent Population Estimation in Mozambique"
+  authors: "Isaac Neal, Sohan Seth, Gary Watmough, Mamadou Saliou Diallo"
+  venue: "AI for Public Health Workshop @ ICLR'21"
+  year: 2021
+  image: "towards-sustainable-estimation.png"
+  url: "https://arxiv.org/abs/2104.12696"
+  poster_url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/347645316/DCC2021Poster.pdf"
+

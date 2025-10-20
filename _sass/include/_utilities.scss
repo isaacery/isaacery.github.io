@@ -46,7 +46,7 @@ body:hover .visually-hidden button {
 /* screen readers */
 
 .screen-reader-text:focus,
-.screen-reader-shortcut:focus  {
+.screen-reader-shortcut:focus {
   clip: auto !important;
   height: auto !important;
   width: auto !important;
@@ -57,7 +57,7 @@ body:hover .visually-hidden button {
   background: #fff;
   z-index: 100000;
   text-decoration: none;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
 }
 
 
@@ -111,19 +111,26 @@ body:hover .visually-hidden button {
 
 /* clearfix */
 
-.cf { clear: both; }
+.cf {
+  clear: both;
+}
 
 .wrapper {
   @include container();
 }
 
 /* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
-.wordwrap { 
-  white-space: pre-wrap;      /* CSS3 */   
-  white-space: -moz-pre-wrap; /* Firefox */    
-  white-space: -pre-wrap;     /* Opera <7 */   
-  white-space: -o-pre-wrap;   /* Opera 7 */    
-  word-wrap: break-word;      /* IE */
+.wordwrap {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
 }
 
 /*
@@ -167,7 +174,7 @@ body:hover .visually-hidden button {
 /* file page content container */
 
 .full {
-  @include breakpoint($large){
+  @include breakpoint($large) {
     margin-right: -1 * span(2.5 of 12) !important;
   }
 }
@@ -358,22 +365,24 @@ body:hover .visually-hidden button {
   background: transparent;
 
   /* overlay the lines by setting both their top values to 0*/
-  &:before, &:after{
+  &:before,
+  &:after {
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     top: 0;
     width: $navicon-width;
   }
 
   /* rotate the lines to form the x shape*/
-  &:before{
-    -webkit-transform: rotate3d(0,0,1,45deg);
-            transform: rotate3d(0,0,1,45deg);
+  &:before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
   }
-  &:after{
-    -webkit-transform: rotate3d(0,0,1,-45deg);
-            transform: rotate3d(0,0,1,-45deg);
+
+  &:after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
   }
 }
 
@@ -389,7 +398,7 @@ body:hover .visually-hidden button {
     position: sticky;
     top: 2em;
 
-    > * {
+    >* {
       display: block;
     }
   }
@@ -478,7 +487,9 @@ body:hover .visually-hidden button {
 .footnotes {
   color: var(--global-text-color-light);
 
-  ol, li, p {
+  ol,
+  li,
+  p {
     margin-bottom: 0;
     font-size: $type-size-6;
   }
@@ -489,7 +500,7 @@ a.reversefootnote {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

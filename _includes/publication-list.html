@@ -1,0 +1,63 @@
+{% include base_path %}
+
+<div class="publications-list">
+    {% for pub in site.data.publications %}
+    <div class="publication-item">
+        <div class="publication-image">
+            {% if pub.url %}
+            <a href="{{ pub.url }}" target="_blank">
+                {% endif %}
+                <img src="{% if pub.image contains '://' %}{{ pub.image }}{% else %}{{ base_path }}/images/{{ pub.image }}{% endif %}"
+                    alt="{{ pub.title }}">
+                {% if pub.url %}
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="publication-content">
+            <h3 class="publication-title">
+                {% if pub.url %}
+                <a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>
+                {% else %}
+                {{ pub.title }}
+                {% endif %}
+            </h3>
+
+            <p class="publication-venue">
+                <em>{{ pub.venue }}</em>
+                {% if pub.year %}
+                ({{ pub.year }})
+                {% endif %}
+            </p>
+
+            <p class="publication-authors">{{ pub.authors | replace: "Isaac Neal", "<strong>Isaac Neal</strong>" }}</p>
+
+            {% if pub.url %}
+            <p class="publication-url">
+                <a href="{{ pub.url }}" target="_blank">{{ pub.url }}</a>
+            </p>
+            {% endif %}
+
+            {% if pub.paper_url or pub.slides_url or pub.poster_url or pub.bibtex_url or pub.code_url %}
+            <p class="publication-links">
+                {% if pub.paper_url %}
+                <a href="{{ pub.paper_url }}" class="btn btn--small">Paper</a>
+                {% endif %}
+                {% if pub.slides_url %}
+                <a href="{{ pub.slides_url }}" class="btn btn--small">Slides</a>
+                {% endif %}
+                {% if pub.poster_url %}
+                <a href="{{ pub.poster_url }}" class="btn btn--small">Poster</a>
+                {% endif %}
+                {% if pub.code_url %}
+                <a href="{{ pub.code_url }}" class="btn btn--small">Code</a>
+                {% endif %}
+                {% if pub.bibtex_url %}
+                <a href="{{ pub.bibtex_url }}" class="btn btn--small">BibTeX</a>
+                {% endif %}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

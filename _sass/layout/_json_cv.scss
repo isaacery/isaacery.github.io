@@ -14,13 +14,13 @@
 /* Header Styles */
 .cv-header {
   margin-bottom: 2rem;
-  border-bottom: 2px solid var(--global-thead-color );
+  border-bottom: 2px solid var(--global-thead-color);
   padding-bottom: 1rem;
 }
 
 .cv-header h1 {
   margin-bottom: 0.5rem;
-  color: var(--global-text-color );
+  color: var(--global-text-color);
 }
 
 .cv-contact-info {
@@ -54,7 +54,7 @@
 }
 
 .cv-profile-item a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Section Styles */
@@ -221,15 +221,15 @@
   .cv-container {
     max-width: 100%;
   }
-  
+
   .cv-header {
     border-bottom-color: var(--global-border-color);
   }
-  
+
   .cv-section h2 {
     border-bottom-color: var(--global-border-color);
   }
-  
+
   .cv-skill-keyword,
   .cv-project-keyword,
   .cv-interest-keyword {
